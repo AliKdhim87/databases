@@ -99,7 +99,7 @@ app.get('/top-10-most-populated-cities', (req, res) => {
 
 //10-What is the population number of the world?
 app.get('/population-number-of-the-world', (req, res) => {
-    let sql = `SELECT Name,Population FROM Country ORDER BY Population DESC LIMIT 1;`;
+    let sql = `SELECT SUM(Population) FROM Country`;
     db.query(sql, (err, result) => {
         console.log(result);
     });
