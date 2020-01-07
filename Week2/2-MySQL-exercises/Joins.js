@@ -21,7 +21,7 @@ app.get('/retrieves-all-employees-and-their-corresponding-manager-full-name', (r
 });
 // all employees and their working department title. 
 app.get('/all-employees-and-their-working-department-title', (req, res) => {
-    let sql = `SELECT employees.employee_no AS "ID" , employees.full_name AS "Full Name", departments.title FROM employees JOIN departments ON employees.department_id = departments.dept_no;`;
+    let sql = `SELECT employees.employee_no AS "ID" , employees.full_name AS "Full Name", departments.title FROM departments LEFT JOIN employees ON employees.department_id = departments.dept_no;`;
     db.query(sql, (error, result) => {
         if (error) throw error;
         console.log(result);
