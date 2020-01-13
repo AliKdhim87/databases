@@ -1,0 +1,15 @@
+{
+    "name": "exercise-1-employee-skills",
+    "version": "1.0.0",
+    "description": " Create and insert queries to the database (mysql) with node js and express",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Ali Kadhim",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mysql": "^2.17.1"
+    }
+}
